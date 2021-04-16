@@ -1,0 +1,46 @@
+torchcs.base package
+====================
+
+Submodules
+----------
+
+torchcs.base.arrayops module
+----------------------------
+
+.. automodule:: torchcs.base.arrayops
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.base.baseops module
+---------------------------
+
+.. automodule:: torchcs.base.baseops
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.base.mathops module
+---------------------------
+
+.. automodule:: torchcs.base.mathops
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.base.randomfunc module
+------------------------------
+
+.. automodule:: torchcs.base.randomfunc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: torchcs.base
+   :members:
+   :undoc-members:
+   :show-inheritance:

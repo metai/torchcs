@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchcs.recovery package &mdash; torchcs 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="torchcs.sensing package" href="torchcs.sensing.html" />
+    <link rel="prev" title="torchcs.misc package" href="torchcs.misc.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> torchcs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchcs</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="torchcs.html">torchcs package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="torchcs.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html">torchcs.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchcs.dictionary.html">torchcs.dictionary package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchcs.misc.html">torchcs.misc package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchcs.recovery package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchcs.sensing.html">torchcs.sensing package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchcs.sharing.html">torchcs.sharing package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html">torchcs.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">torchcs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">torchcs</a> &raquo;</li>
+        
+          <li><a href="torchcs.html">torchcs package</a> &raquo;</li>
+        
+      <li>torchcs.recovery package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchcs.recovery.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchcs-recovery-package">
+<h1>torchcs.recovery package<a class="headerlink" href="#torchcs-recovery-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchcs.recovery.ista_fista">
+<span id="torchcs-recovery-ista-fista-module"></span><h2>torchcs.recovery.ista_fista module<a class="headerlink" href="#module-torchcs.recovery.ista_fista" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchcs.recovery.ista_fista.fista">
+<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">fista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=0.0001</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.fista" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Iterative Shrinkage Thresholding Algorithm</p>
+<p>Fast Iterative Shrinkage Thresholding Algorithm</p>
+<div class="math">
+\[{\bf Y} = {\bf Phi}{\bf X} + \lambda \|{\bf X}\|_1
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Y</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – ${bf Y} ∈ {mathbb C}^{Mtimes L}$</p></li>
+<li><p><strong>Phi</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – ${bf A} ∈ {mathbb C}^{Mtimes N}$</p></li>
+<li><p><strong>lambd</strong> (<em>{number}</em><em>, </em><em>optional</em>) – [description] (the default is 0.5, which [default_description])</p></li>
+<li><p><strong>niter</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – [description] (the default is None, which [default_description])</p></li>
+<li><p><strong>tol</strong> (<em>{number}</em><em>, </em><em>optional</em>) – [description] (the default is 1e-6, which [default_description])</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>${bf X} ∈ {mathbb C}^{Ntimes L}$</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)">type</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchcs.recovery.ista_fista.ista">
+<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">ista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=0.0001</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.ista" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Iterative Shrinkage Thresholding Algorithm</p>
+<p>Fast Iterative Shrinkage Thresholding Algorithm</p>
+<div class="math">
+\[{\bf Y} = {\bf Phi}{\bf X} + \lambda \|{\bf X}\|_1
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Y</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – ${bf Y} ∈ {mathbb C}^{Mtimes L}$</p></li>
+<li><p><strong>Phi</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – ${bf A} ∈ {mathbb C}^{Mtimes N}$</p></li>
+<li><p><strong>niter</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – [description] (the default is None, which [default_description])</p></li>
+<li><p><strong>lambd</strong> (<em>{number}</em><em>, </em><em>optional</em>) – [description] (the default is 0.5, which [default_description])</p></li>
+<li><p><strong>tol</strong> (<em>{number}</em><em>, </em><em>optional</em>) – [description] (the default is 1e-6, which [default_description])</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>${bf X} ∈ {mathbb C}^{Ntimes L}$</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)">type</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchcs.recovery.matching_pursuit">
+<span id="torchcs-recovery-matching-pursuit-module"></span><h2>torchcs.recovery.matching_pursuit module<a class="headerlink" href="#module-torchcs.recovery.matching_pursuit" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchcs.recovery.matching_pursuit.gp">
+<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">gp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.gp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchcs.recovery.matching_pursuit.mp">
+<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">mp</code><span class="sig-paren">(</span><em class="sig-param">X, D, K=None, norm=[False, True], tol=1e-06, mode=None, islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.mp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matching Pursuit</p>
+<div class="math">
+\[x = Dz
+
+\]</div>
+<div class="math">
+\[({\bm D}_{{\mathbb I}_t}^T{\bm D}_{{\mathbb I}_t})^{-1}
+
+\]</div>
+<p>to avoid matrix singularity</p>
+<div class="math">
+\[({\bm D}_{{\mathbb I}_t}^T{\bm D}_{{\mathbb I}_t} + C {\bm I})^{-1}
+
+\]</div>
+<p>where, <span class="math">\(C &gt; 0\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>torch tensor</em>) – signal vector or matrix, if <span class="math">\({\bm X}\in{\mathbb R}^{M\times L}\)</span> is a matrix,
+then apply OMP on each column</p></li>
+<li><p><strong>D</strong> (<em>torch tensor</em>) – overcomplete dictionary ( <span class="math">\({\bm D}\in {\mathbb R}^{M\times N}\)</span> )</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>K</strong> (<em>integer</em>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
+<li><p><strong>norm</strong> (<em>list of bool</em>) – The first element specifies whether to normalize data, the second element specifies
+whther to normalize dictionary. If True, will be normalized by subtracting the mean
+and dividing by the l2-norm. (default: [False, True])</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
+<code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex–&gt;real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real–&gt;real</p></li>
+<li><p><strong>islog</strong> (<em>boolean</em>) – Show more log info.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchcs.recovery.matching_pursuit.omp">
+<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">omp</code><span class="sig-paren">(</span><em class="sig-param">X, D, K=None, C=1e-06, norm=[False, False], tol=1e-06, method='pinv', mode=None, device='cpu', islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.omp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Orthogonal Matching Pursuit</p>
+<p>ROMP add a small penalty factor <span class="math">\(C\)</span> to</p>
+<div class="math">
+\[x = Dz
+
+\]</div>
+<div class="math">
+\[({\bm D}_{{\mathbb I}_t}^T{\bm D}_{{\mathbb I}_t})^{-1}
+
+\]</div>
+<p>to avoid matrix singularity</p>
+<div class="math">
+\[({\bm D}_{{\mathbb I}_t}^T{\bm D}_{{\mathbb I}_t} + C {\bm I})^{-1}
+
+\]</div>
+<p>where, <span class="math">\(C &gt; 0\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>torch tensor</em>) – signal vector or matrix, if <span class="math">\({\bm X}\in{\mathbb R}^{M\times L}\)</span> is a matrix,
+then apply OMP on each column</p></li>
+<li><p><strong>D</strong> (<em>torch tensor</em>) – overcomplete dictionary ( <span class="math">\({\bm D}\in {\mathbb R}^{M\times N}\)</span> )</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>K</strong> (<em>integer</em>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
+<li><p><strong>C</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The regularization factor (default: 1.0e-6)</p></li>
+<li><p><strong>norm</strong> (<em>list of bool</em>) – The first element specifies whether to normalize data, the second element specifies
+whther to normalize dictionary. If True, will be normalized by subtracting the mean
+and dividing by the l2-norm. (default: [False, False])</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
+<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The method for solving new sparse coefficients.</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
+<code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex–&gt;real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real–&gt;real.</p></li>
+<li><p><strong>islog</strong> (<em>boolean</em>) – Show more log info.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchcs.recovery">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchcs.recovery" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="torchcs.sensing.html" class="btn btn-neutral float-right" title="torchcs.sensing package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="torchcs.misc.html" class="btn btn-neutral float-left" title="torchcs.misc package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2020, Zhi Liu
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

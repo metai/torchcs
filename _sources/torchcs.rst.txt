@@ -1,0 +1,23 @@
+torchcs package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+
+   torchcs.base
+   torchcs.dictionary
+   torchcs.misc
+   torchcs.recovery
+   torchcs.sensing
+   torchcs.sharing
+   torchcs.utils
+
+Module contents
+---------------
+
+.. automodule:: torchcs
+   :members:
+   :undoc-members:
+   :show-inheritance:

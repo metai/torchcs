@@ -1,0 +1,30 @@
+torchcs.sharing package
+=======================
+
+Submodules
+----------
+
+torchcs.sharing.nonlinearfn module
+----------------------------------
+
+.. automodule:: torchcs.sharing.nonlinearfn
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.sharing.normalization module
+------------------------------------
+
+.. automodule:: torchcs.sharing.normalization
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: torchcs.sharing
+   :members:
+   :undoc-members:
+   :show-inheritance:

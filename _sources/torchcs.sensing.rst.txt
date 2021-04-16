@@ -1,0 +1,38 @@
+torchcs.sensing package
+=======================
+
+Submodules
+----------
+
+torchcs.sensing.bernoullis module
+---------------------------------
+
+.. automodule:: torchcs.sensing.bernoullis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.sensing.gaussians module
+--------------------------------
+
+.. automodule:: torchcs.sensing.gaussians
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.sensing.toeplitz module
+-------------------------------
+
+.. automodule:: torchcs.sensing.toeplitz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: torchcs.sensing
+   :members:
+   :undoc-members:
+   :show-inheritance:

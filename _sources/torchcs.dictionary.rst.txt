@@ -1,0 +1,46 @@
+torchcs.dictionary package
+==========================
+
+Submodules
+----------
+
+torchcs.dictionary.dcts module
+------------------------------
+
+.. automodule:: torchcs.dictionary.dcts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.dictionary.dfts module
+------------------------------
+
+.. automodule:: torchcs.dictionary.dfts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.dictionary.dictshow module
+----------------------------------
+
+.. automodule:: torchcs.dictionary.dictshow
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.dictionary.dwts module
+------------------------------
+
+.. automodule:: torchcs.dictionary.dwts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: torchcs.dictionary
+   :members:
+   :undoc-members:
+   :show-inheritance:

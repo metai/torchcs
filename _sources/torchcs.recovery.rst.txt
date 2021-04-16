@@ -1,0 +1,30 @@
+torchcs.recovery package
+========================
+
+Submodules
+----------
+
+torchcs.recovery.ista\_fista module
+-----------------------------------
+
+.. automodule:: torchcs.recovery.ista_fista
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchcs.recovery.matching\_pursuit module
+-----------------------------------------
+
+.. automodule:: torchcs.recovery.matching_pursuit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: torchcs.recovery
+   :members:
+   :undoc-members:
+   :show-inheritance:
