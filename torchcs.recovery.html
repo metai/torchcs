@@ -184,56 +184,62 @@
 <span id="torchcs-recovery-ista-fista-module"></span><h2>torchcs.recovery.ista_fista module<a class="headerlink" href="#module-torchcs.recovery.ista_fista" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="torchcs.recovery.ista_fista.fista">
-<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">fista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=0.0001</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.fista" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">fista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=None</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.fista" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fast Iterative Shrinkage Thresholding Algorithm</p>
 <p>Fast Iterative Shrinkage Thresholding Algorithm</p>
 <div class="math">
-\[{\bf Y} = {\bf Phi}{\bf X} + \lambda \|{\bf X}\|_1
+\[{\bf Y} = {\bf \Phi}{\bf X} + \lambda \|{\bf X}\|_1
 
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>Y</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – ${bf Y} ∈ {mathbb C}^{Mtimes L}$</p></li>
-<li><p><strong>Phi</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – ${bf A} ∈ {mathbb C}^{Mtimes N}$</p></li>
-<li><p><strong>lambd</strong> (<em>{number}</em><em>, </em><em>optional</em>) – [description] (the default is 0.5, which [default_description])</p></li>
-<li><p><strong>niter</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – [description] (the default is None, which [default_description])</p></li>
-<li><p><strong>tol</strong> (<em>{number}</em><em>, </em><em>optional</em>) – [description] (the default is 1e-6, which [default_description])</p></li>
+<li><p><strong>Y</strong> (<em>Tensor</em>) – Observation <span class="math">\({\bf Y} \in {\mathbb C}^{M\times L}\)</span></p></li>
+<li><p><strong>Phi</strong> (<em>Tensor</em>) – Observation matrix <span class="math">\({\bf \Phi} \in {\mathbb C}^{M\times N}\)</span></p></li>
+<li><p><strong>niter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The number of iteration (the default is None)</p></li>
+<li><p><strong>lambd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Regularization factor (the default is 0.5)</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The update step (the default is None, which means auto computed)</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The tolerance of error (the default is 1e-6)</p></li>
+<li><p><strong>ssmode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – The type of softshrink function, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex-complex,
+<code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex-real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real-real.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>${bf X} ∈ {mathbb C}^{Ntimes L}$</p>
+<dd class="field-even"><p><strong>X</strong> – Reconstructed tensor <span class="math">\({\bf X} \in {\mathbb C}^{N\times L}\)</span></p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)">type</a>]</p>
+<dd class="field-odd"><p>{Tensor}</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchcs.recovery.ista_fista.ista">
-<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">ista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=0.0001</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.ista" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fast Iterative Shrinkage Thresholding Algorithm</p>
-<p>Fast Iterative Shrinkage Thresholding Algorithm</p>
+<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">ista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=None</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.ista" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterative Shrinkage Thresholding Algorithm</p>
+<p>Iterative Shrinkage Thresholding Algorithm</p>
 <div class="math">
-\[{\bf Y} = {\bf Phi}{\bf X} + \lambda \|{\bf X}\|_1
+\[{\bf Y} = {\bf \Phi}{\bf X} + \lambda \|{\bf X}\|_1
 
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>Y</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – ${bf Y} ∈ {mathbb C}^{Mtimes L}$</p></li>
-<li><p><strong>Phi</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – ${bf A} ∈ {mathbb C}^{Mtimes N}$</p></li>
-<li><p><strong>niter</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – [description] (the default is None, which [default_description])</p></li>
-<li><p><strong>lambd</strong> (<em>{number}</em><em>, </em><em>optional</em>) – [description] (the default is 0.5, which [default_description])</p></li>
-<li><p><strong>tol</strong> (<em>{number}</em><em>, </em><em>optional</em>) – [description] (the default is 1e-6, which [default_description])</p></li>
+<li><p><strong>Y</strong> (<em>Tensor</em>) – Observation <span class="math">\({\bf Y} \in {\mathbb C}^{M\times L}\)</span></p></li>
+<li><p><strong>Phi</strong> (<em>Tensor</em>) – Observation matrix <span class="math">\({\bf \Phi} \in {\mathbb C}^{M\times N}\)</span></p></li>
+<li><p><strong>niter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The number of iteration. (the default is None, which means Inf)</p></li>
+<li><p><strong>lambd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Regularization factor (the default is 0.5)</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The update step (the default is None, which means auto computed)</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The tolerance of error (the default is 1e-6)</p></li>
+<li><p><strong>ssmode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – The type of softshrink function, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex-complex,
+<code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex-real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real-real.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>${bf X} ∈ {mathbb C}^{Ntimes L}$</p>
+<dd class="field-even"><p><strong>X</strong> – Reconstructed tensor <span class="math">\({\bf X} \in {\mathbb C}^{N\times L}\)</span></p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)">type</a>]</p>
+<dd class="field-odd"><p>Tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -274,7 +280,7 @@ then apply OMP on each column</p></li>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>K</strong> (<em>integer</em>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
+<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
 <li><p><strong>norm</strong> (<em>list of bool</em>) – The first element specifies whether to normalize data, the second element specifies
 whther to normalize dictionary. If True, will be normalized by subtracting the mean
 and dividing by the l2-norm. (default: [False, True])</p></li>
@@ -316,7 +322,7 @@ then apply OMP on each column</p></li>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>K</strong> (<em>integer</em>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
+<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
 <li><p><strong>C</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The regularization factor (default: 1.0e-6)</p></li>
 <li><p><strong>norm</strong> (<em>list of bool</em>) – The first element specifies whether to normalize data, the second element specifies
 whther to normalize dictionary. If True, will be normalized by subtracting the mean

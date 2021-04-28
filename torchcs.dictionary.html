@@ -245,7 +245,7 @@ IEEE Transactions on Computers, C-23(1):90–93, 1974. doi:10.1109/T-C.1974.2237
 So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>N</strong> (<em>integer</em>) – The dictionary is of size <span class="math">\(N\times N\)</span></p>
+<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The dictionary is of size <span class="math">\(N\times N\)</span></p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>D</strong> – DCT dictionary ( <span class="math">\({\bm D}^T\)</span> ).</p>
@@ -271,7 +271,7 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>N</strong> (<em>integer</em>) – signal dimesion.</p>
+<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – signal dimesion.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>T</strong> – DCT matrix.</p>
@@ -339,7 +339,7 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>N</strong> (<em>integer</em>) – signal dimesion.</p>
+<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – signal dimesion.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>T</strong> – IDCT matrix.</p>
@@ -413,17 +413,7 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 <dd><p>1-Dimension Discrete Fourier transform</p>
 <blockquote>
 <div><p>The DFT of signal <span class="math">\(x[n], n=0, 1,\cdots, N-1\)</span> is expressed as</p>
-<div class="math" id="equation-equ-dft">
-<span class="eqno">(11)<a class="headerlink" href="#equation-equ-dft" title="Permalink to this equation">¶</a></span>\[y[k] = {\rm DFT}(x[n]) = \left\{ {\begin{array}{lll}
-    {\sqrt{\frac{2}{N}}\sum_{n=0}^{N-1}x[n]\frac{1}{\sqrt 2}, \quad k=0}\\
-    {\sqrt{\frac{2}{N}}\sum_{n=0}^{N-1}x[n]{\rm cos}\frac{(2n + 1)k\pi}{2N}, \quad k=1, \cdots, N-1}
-    \end{array}} \right.
-
-\]</div>
-<p>where, <span class="math">\(k=0, 1, \cdots, N-1\)</span></p>
 </div></blockquote>
-<p>N. Ahmed, T. Natarajan, and K. R. Rao. Discrete cosine transform.
-IEEE Transactions on Computers, C-23(1):90–93, 1974. doi:10.1109/T-C.1974.223784</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>x</strong> (<em>numpy array</em>) – signal vector or matrix</p>
@@ -462,12 +452,6 @@ IEEE Transactions on Computers, C-23(1):90–93, 1974. doi:10.1109/T-C.1974.2237
 <dt id="torchcs.dictionary.dfts.dftdict">
 <code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">dftdict</code><span class="sig-paren">(</span><em class="sig-param">N</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dftdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Complete DFT dictionary</p>
-<div class="math" id="equation-equ-dft-matrix">
-<span class="eqno">(12)<a class="headerlink" href="#equation-equ-dft-matrix" title="Permalink to this equation">¶</a></span>\[{\bm D} = \sqrt{\frac{2}{N}}\left[\begin{array}{cccc}{1/\sqrt{2}} & {1/\sqrt{2}} & {1/\sqrt{2}} & {\cdots} & {1/\sqrt{2}} \\ {\cos \frac{\pi}{2 N}} & {\cos \frac{3 \pi}{2 N}} & {\cos \frac{5 \pi}{2 N}} & {\cdots} & {\cos \frac{(2 N-1) \pi}{2 N}} \\ {\vdots} & {\vdots} & {\vdots} & {\vdots} \\ {\cos \frac{(N-1) \pi}{2 N}} & {\cos \frac{3(N-1) \pi}{2 N}} & {\cos \frac{5(N-1) \pi}{2 N}} & {\cdots} & {\cos \frac{(2 N-1)(N-1) \pi}{2 N}}\end{array}\right]
-
-\]</div>
-<p>Because <span class="math">\({\bm z} = {\bm D}{\bm x}\)</span>, <span class="math">\({\bm D}{\bm D}^T = {\bm I}\)</span>
-So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>N</strong> (<em>integer</em>) – The dictionary is of size <span class="math">\(N\times N\)</span></p>
@@ -486,7 +470,7 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">dftmtx</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dftmtx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Discrete Fourier transform matrix</p>
 <div class="math" id="equation-equ-dft-matrixrep">
-<span class="eqno">(13)<a class="headerlink" href="#equation-equ-dft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm y} = {\bm D}{\bm x}
+<span class="eqno">(11)<a class="headerlink" href="#equation-equ-dft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm y} = {\bm D}{\bm x}
 
 \]</div>
 <p>where, <span class="math">\({\bm x} = (x_n)_{N\times 1}, x_n = x[n]\)</span>, <span class="math">\({\bm D} = (d_{ij})_{N\times N}\)</span> can be expressed as</p>
@@ -508,7 +492,7 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">idft1</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.idft1" title="Permalink to this definition">¶</a></dt>
 <dd><p>1-Dimension Inverse Discrete cosine transform</p>
 <div class="math" id="equation-equ-idft-matrixrep">
-<span class="eqno">(14)<a class="headerlink" href="#equation-equ-idft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm x} = {\bm D}^{-1}{\bm y} = {\bm D}^T{\bm y}
+<span class="eqno">(12)<a class="headerlink" href="#equation-equ-idft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm x} = {\bm D}^{-1}{\bm y} = {\bm D}^T{\bm y}
 
 \]</div>
 <dl class="field-list simple">
@@ -550,7 +534,7 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">idftmtx</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.idftmtx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Discrete Fourier transform matrix</p>
 <div class="math" id="equation-equ-dft-matrixrep">
-<span class="eqno">(15)<a class="headerlink" href="#equation-equ-dft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm y} = {\bm D}{\bm x}
+<span class="eqno">(13)<a class="headerlink" href="#equation-equ-dft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm y} = {\bm D}{\bm x}
 
 \]</div>
 <p>where, <span class="math">\({\bm x} = (x_n)_{N\times 1}, x_n = x[n]\)</span>, <span class="math">\({\bm D} = (d_{ij})_{N\times N}\)</span> can be expressed as</p>
@@ -571,14 +555,6 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <dt id="torchcs.dictionary.dfts.odftdict">
 <code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">odftdict</code><span class="sig-paren">(</span><em class="sig-param">dictshape</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.odftdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overcomplete 1D-DFT dictionary</p>
-<div class="math" id="equation-equ-odft-matrix">
-<span class="eqno">(16)<a class="headerlink" href="#equation-equ-odft-matrix" title="Permalink to this equation">¶</a></span>\[{\bm D} = \sqrt{\frac{2}{N}}\left[\begin{array}{cccc}{1/\sqrt{2}} & {1/\sqrt{2}} & {1/\sqrt{2}} & {\cdots} & {1/\sqrt{2}} \\ {\cos \frac{\pi}{2 N}} & {\cos \frac{3 \pi}{2 N}} & {\cos \frac{5 \pi}{2 N}} & {\cdots} & {\cos \frac{(2 N-1) \pi}{2 N}} \\ {\vdots} & {\vdots} & {\vdots} & {\vdots} \\ {\cos \frac{(M-1) \pi}{2 N}} & {\cos \frac{3(M-1) \pi}{2 N}} & {\cos \frac{5(M-1) \pi}{2 N}} & {\cdots} & {\cos \frac{(2 N-1)(M-1) \pi}{2 N}}\end{array}\right]
-
-\]</div>
-<div class="math" id="equation-equ-odft-matrix-normed">
-<span class="eqno">(17)<a class="headerlink" href="#equation-equ-odft-matrix-normed" title="Permalink to this equation">¶</a></span>\[{\bm D} = \left[\frac{{\bm d}_0}{\|{\bm d}_0\|_2}, \frac{{\bm d}_1}{\|{\bm d}_1\|_2},\cdots, \frac{{\bm d}_{N-1}}{\|{\bm d}_{N-1}\|_2}\right]
-
-\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>dictshape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a>) – dictionary shape</p>
@@ -597,7 +573,7 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">odftndict</code><span class="sig-paren">(</span><em class="sig-param">dictshape</em>, <em class="sig-param">axis=-1</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.odftndict" title="Permalink to this definition">¶</a></dt>
 <dd><p>generates Overcomplete nD-DFT dictionary</p>
 <div class="math" id="equation-equ-createnddft-matrix">
-<span class="eqno">(18)<a class="headerlink" href="#equation-equ-createnddft-matrix" title="Permalink to this equation">¶</a></span>\[{\bm D}_{nd} = {\bm D}_{(n-1)d} \otimes {\bm D}_{(n-1)d}.
+<span class="eqno">(14)<a class="headerlink" href="#equation-equ-createnddft-matrix" title="Permalink to this equation">¶</a></span>\[{\bm D}_{nd} = {\bm D}_{(n-1)d} \otimes {\bm D}_{(n-1)d}.
 
 \]</div>
 <dl class="field-list simple">
@@ -632,10 +608,10 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>D</strong> (<em>array_like</em>) – Blocks to be shown, a bH-bW-bC-bN numpy ndarray.</p></li>
-<li><p><strong>rcsize</strong> (<em>int tuple</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – Specifies how many rows and cols of blocks that you want to show,
+<li><p><strong>rcsize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – Specifies how many rows and cols of blocks that you want to show,
 e.g. (rows, cols). If not given, rcsize=(rows, clos) will be computed
 automaticly.</p></li>
-<li><p><strong>stride</strong> (<em>int tuple</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – The step size (blank pixels nums) in row and col between two blocks.
+<li><p><strong>stride</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – The step size (blank pixels nums) in row and col between two blocks.
 If not given, stride=(1,1).</p></li>
 <li><p><strong>plot</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – True for ploting, False for silent and returns a H-W-C numpy ndarray
 for showing.</p></li>
