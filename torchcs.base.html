@@ -101,7 +101,7 @@
 <li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html">torchcs.utils package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -300,105 +300,8 @@ All tensors must either have the same shape (except in the concatenating dimensi
 </dd></dl>
 
 </div>
-<div class="section" id="module-torchcs.base.mathops">
-<span id="torchcs-base-mathops-module"></span><h2>torchcs.base.mathops module<a class="headerlink" href="#module-torchcs.base.mathops" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.base.mathops.absc">
-<code class="sig-prename descclassname">torchcs.base.mathops.</code><code class="sig-name descname">absc</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.base.mathops.absc" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="torchcs.base.mathops.conj">
-<code class="sig-prename descclassname">torchcs.base.mathops.</code><code class="sig-name descname">conj</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.base.mathops.conj" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="torchcs.base.mathops.ebemulcc">
-<code class="sig-prename descclassname">torchcs.base.mathops.</code><code class="sig-name descname">ebemulcc</code><span class="sig-paren">(</span><em class="sig-param">A</em>, <em class="sig-param">B</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.base.mathops.ebemulcc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Element-by-element complex multiplication</p>
-<p>like A .* B in matlab</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> (<em>Tensor</em>) – An any size torch tensor, both complex and real representation are supported.
-For real representation, the last dimension is 2 (the first –&gt; real part, the second –&gt; imaginary part).</p></li>
-<li><p><strong>B</strong> (<em>Tensor</em>) – An any size torch tensor, both complex and real representation are supported.
-For real representation, the last dimension is 2 (the first –&gt; real part, the second –&gt; imaginary part).
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">B</span></code> has the same size as <code class="xref py py-attr docutils literal notranslate"><span class="pre">A</span></code>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The result of element-by-element complex multiplication with the same repesentation as <code class="xref py py-attr docutils literal notranslate"><span class="pre">A</span></code>.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tensor</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="torchcs.base.mathops.matmulcc">
-<code class="sig-prename descclassname">torchcs.base.mathops.</code><code class="sig-name descname">matmulcc</code><span class="sig-paren">(</span><em class="sig-param">A</em>, <em class="sig-param">B</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.base.mathops.matmulcc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Complex matrix multiplication</p>
-<p>like A * B in matlab</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> (<em>Tensor</em>) – An any size torch tensor, both complex and real representation are supported.
-For real representation, the last dimension is 2 (the first –&gt; real part, the second –&gt; imaginary part).</p></li>
-<li><p><strong>B</strong> (<em>Tensor</em>) – An any size torch tensor, both complex and real representation are supported.
-For real representation, the last dimension is 2 (the first –&gt; real part, the second –&gt; imaginary part).
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">B</span></code> has the same size as <code class="xref py py-attr docutils literal notranslate"><span class="pre">A</span></code>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>result of complex multiplication with the same repesentation as <code class="xref py py-attr docutils literal notranslate"><span class="pre">A</span></code>.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tensor</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="torchcs.base.mathops.mmcc">
-<code class="sig-prename descclassname">torchcs.base.mathops.</code><code class="sig-name descname">mmcc</code><span class="sig-paren">(</span><em class="sig-param">A</em>, <em class="sig-param">B</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.base.mathops.mmcc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Complex matrix multiplication</p>
-<p>like A * B in matlab</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> (<em>Tensor</em>) – An any size torch tensor, both complex and real representation are supported.
-For real representation, the last dimension is 2 (the first –&gt; real part, the second –&gt; imaginary part).</p></li>
-<li><p><strong>B</strong> (<em>Tensor</em>) – An any size torch tensor, both complex and real representation are supported.
-For real representation, the last dimension is 2 (the first –&gt; real part, the second –&gt; imaginary part).
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">B</span></code> has the same size as <code class="xref py py-attr docutils literal notranslate"><span class="pre">A</span></code>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The result of complex multiplication with the same repesentation as <code class="xref py py-attr docutils literal notranslate"><span class="pre">A</span></code>.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tensor</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="torchcs.base.mathops.nextpow2">
-<code class="sig-prename descclassname">torchcs.base.mathops.</code><code class="sig-name descname">nextpow2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.base.mathops.nextpow2" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="torchcs.base.mathops.prevpow2">
-<code class="sig-prename descclassname">torchcs.base.mathops.</code><code class="sig-name descname">prevpow2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.base.mathops.prevpow2" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="torchcs.base.mathops.sinc">
-<code class="sig-prename descclassname">torchcs.base.mathops.</code><code class="sig-name descname">sinc</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.base.mathops.sinc" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="torchcs-base-mathops-module">
+<h2>torchcs.base.mathops module<a class="headerlink" href="#torchcs-base-mathops-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-torchcs.base.randomfunc">
 <span id="torchcs-base-randomfunc-module"></span><h2>torchcs.base.randomfunc module<a class="headerlink" href="#module-torchcs.base.randomfunc" title="Permalink to this headline">¶</a></h2>
