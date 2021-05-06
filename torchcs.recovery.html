@@ -101,7 +101,7 @@
 <li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html">torchcs.utils package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-contents">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -180,14 +180,166 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="torchcs-recovery-ista-fista-module">
-<h2>torchcs.recovery.ista_fista module<a class="headerlink" href="#torchcs-recovery-ista-fista-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-torchcs.recovery.ista_fista">
+<span id="torchcs-recovery-ista-fista-module"></span><h2>torchcs.recovery.ista_fista module<a class="headerlink" href="#module-torchcs.recovery.ista_fista" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchcs.recovery.ista_fista.fista">
+<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">fista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=None</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.fista" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Iterative Shrinkage Thresholding Algorithm</p>
+<p>Fast Iterative Shrinkage Thresholding Algorithm</p>
+<div class="math">
+\[{\bf Y} = {\bf \Phi}{\bf X} + \lambda \|{\bf X}\|_1
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Y</strong> (<em>Tensor</em>) – Observation <span class="math">\({\bf Y} \in {\mathbb C}^{M\times L}\)</span></p></li>
+<li><p><strong>Phi</strong> (<em>Tensor</em>) – Observation matrix <span class="math">\({\bf \Phi} \in {\mathbb C}^{M\times N}\)</span></p></li>
+<li><p><strong>niter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The number of iteration (the default is None)</p></li>
+<li><p><strong>lambd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Regularization factor (the default is 0.5)</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The update step (the default is None, which means auto computed)</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The tolerance of error (the default is 1e-6)</p></li>
+<li><p><strong>ssmode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – The type of softshrink function, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex-complex,
+<code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex-real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real-real.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X</strong> – Reconstructed tensor <span class="math">\({\bf X} \in {\mathbb C}^{N\times L}\)</span></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchcs.recovery.ista_fista.ista">
+<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">ista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=None</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.ista" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterative Shrinkage Thresholding Algorithm</p>
+<p>Iterative Shrinkage Thresholding Algorithm</p>
+<div class="math">
+\[{\bf Y} = {\bf \Phi}{\bf X} + \lambda \|{\bf X}\|_1
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Y</strong> (<em>Tensor</em>) – Observation <span class="math">\({\bf Y} \in {\mathbb C}^{M\times L}\)</span></p></li>
+<li><p><strong>Phi</strong> (<em>Tensor</em>) – Observation matrix <span class="math">\({\bf \Phi} \in {\mathbb C}^{M\times N}\)</span></p></li>
+<li><p><strong>niter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The number of iteration. (the default is None, which means Inf)</p></li>
+<li><p><strong>lambd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Regularization factor (the default is 0.5)</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The update step (the default is None, which means auto computed)</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The tolerance of error (the default is 1e-6)</p></li>
+<li><p><strong>ssmode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – The type of softshrink function, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex-complex,
+<code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex-real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real-real.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>X</strong> – Reconstructed tensor <span class="math">\({\bf X} \in {\mathbb C}^{N\times L}\)</span></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
-<div class="section" id="torchcs-recovery-matching-pursuit-module">
-<h2>torchcs.recovery.matching_pursuit module<a class="headerlink" href="#torchcs-recovery-matching-pursuit-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-torchcs.recovery.matching_pursuit">
+<span id="torchcs-recovery-matching-pursuit-module"></span><h2>torchcs.recovery.matching_pursuit module<a class="headerlink" href="#module-torchcs.recovery.matching_pursuit" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchcs.recovery.matching_pursuit.gp">
+<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">gp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.gp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchcs.recovery.matching_pursuit.mp">
+<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">mp</code><span class="sig-paren">(</span><em class="sig-param">X, D, K=None, norm=[False, True], tol=1e-06, mode=None, islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.mp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matching Pursuit</p>
+<div class="math">
+\[x = Dz
+
+\]</div>
+<div class="math">
+\[({\bm D}_{{\mathbb I}_t}^T{\bm D}_{{\mathbb I}_t})^{-1}
+
+\]</div>
+<p>to avoid matrix singularity</p>
+<div class="math">
+\[({\bm D}_{{\mathbb I}_t}^T{\bm D}_{{\mathbb I}_t} + C {\bm I})^{-1}
+
+\]</div>
+<p>where, <span class="math">\(C &gt; 0\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>torch tensor</em>) – signal vector or matrix, if <span class="math">\({\bm X}\in{\mathbb R}^{M\times L}\)</span> is a matrix,
+then apply OMP on each column</p></li>
+<li><p><strong>D</strong> (<em>torch tensor</em>) – overcomplete dictionary ( <span class="math">\({\bm D}\in {\mathbb R}^{M\times N}\)</span> )</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
+<li><p><strong>norm</strong> (<em>list of bool</em>) – The first element specifies whether to normalize data, the second element specifies
+whther to normalize dictionary. If True, will be normalized by subtracting the mean
+and dividing by the l2-norm. (default: [False, True])</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
+<code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex–&gt;real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real–&gt;real</p></li>
+<li><p><strong>islog</strong> (<em>boolean</em>) – Show more log info.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchcs.recovery.matching_pursuit.omp">
+<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">omp</code><span class="sig-paren">(</span><em class="sig-param">X, D, K=None, C=1e-06, norm=[False, False], tol=1e-06, method='pinv', mode=None, device='cpu', islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.omp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Orthogonal Matching Pursuit</p>
+<p>ROMP add a small penalty factor <span class="math">\(C\)</span> to</p>
+<div class="math">
+\[x = Dz
+
+\]</div>
+<div class="math">
+\[({\bm D}_{{\mathbb I}_t}^T{\bm D}_{{\mathbb I}_t})^{-1}
+
+\]</div>
+<p>to avoid matrix singularity</p>
+<div class="math">
+\[({\bm D}_{{\mathbb I}_t}^T{\bm D}_{{\mathbb I}_t} + C {\bm I})^{-1}
+
+\]</div>
+<p>where, <span class="math">\(C &gt; 0\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>torch tensor</em>) – signal vector or matrix, if <span class="math">\({\bm X}\in{\mathbb R}^{M\times L}\)</span> is a matrix,
+then apply OMP on each column</p></li>
+<li><p><strong>D</strong> (<em>torch tensor</em>) – overcomplete dictionary ( <span class="math">\({\bm D}\in {\mathbb R}^{M\times N}\)</span> )</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
+<li><p><strong>C</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The regularization factor (default: 1.0e-6)</p></li>
+<li><p><strong>norm</strong> (<em>list of bool</em>) – The first element specifies whether to normalize data, the second element specifies
+whther to normalize dictionary. If True, will be normalized by subtracting the mean
+and dividing by the l2-norm. (default: [False, False])</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
+<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The method for solving new sparse coefficients.</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
+<code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex–&gt;real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real–&gt;real.</p></li>
+<li><p><strong>islog</strong> (<em>boolean</em>) – Show more log info.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-torchcs.recovery">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchcs.recovery" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
