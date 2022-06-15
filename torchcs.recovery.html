@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>torchcs.recovery package &mdash; torchcs 1.0 documentation</title>
@@ -13,7 +14,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
 
   
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
         <script src="_static/katex_autorenderer.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -42,7 +45,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchcs.sensing package" href="torchcs.sensing.html" />
-    <link rel="prev" title="torchcs.misc package" href="torchcs.misc.html" /> 
+    <link rel="prev" title="torchcs.dictionary package" href="torchcs.dictionary.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,17 +93,17 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchcs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="torchcs.html">torchcs package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="torchcs.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html">torchcs.base package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.dictionary.html">torchcs.dictionary package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.misc.html">torchcs.misc package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchcs.recovery package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sensing.html">torchcs.sensing package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sharing.html">torchcs.sharing package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html">torchcs.utils package</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs.version">torchcs.version module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs">Module contents</a></li>
 </ul>
 </li>
@@ -175,16 +178,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="torchcs-recovery-package">
+  <section id="torchcs-recovery-package">
 <h1>torchcs.recovery package<a class="headerlink" href="#torchcs-recovery-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-torchcs.recovery.ista_fista">
+</section>
+<section id="module-torchcs.recovery.ista_fista">
 <span id="torchcs-recovery-ista-fista-module"></span><h2>torchcs.recovery.ista_fista module<a class="headerlink" href="#module-torchcs.recovery.ista_fista" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.recovery.ista_fista.fista">
-<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">fista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=None</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.fista" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.recovery.ista_fista.fista">
+<span class="sig-prename descclassname"><span class="pre">torchcs.recovery.ista_fista.</span></span><span class="sig-name descname"><span class="pre">fista</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">niter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.fista" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fast Iterative Shrinkage Thresholding Algorithm</p>
 <p>Fast Iterative Shrinkage Thresholding Algorithm</p>
 <div class="math">
@@ -196,26 +199,53 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Y</strong> (<em>Tensor</em>) – Observation <span class="math">\({\bf Y} \in {\mathbb C}^{M\times L}\)</span></p></li>
 <li><p><strong>Phi</strong> (<em>Tensor</em>) – Observation matrix <span class="math">\({\bf \Phi} \in {\mathbb C}^{M\times N}\)</span></p></li>
-<li><p><strong>niter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The number of iteration (the default is None)</p></li>
-<li><p><strong>lambd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Regularization factor (the default is 0.5)</p></li>
-<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The update step (the default is None, which means auto computed)</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The tolerance of error (the default is 1e-6)</p></li>
-<li><p><strong>ssmode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – The type of softshrink function, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex-complex,
+<li><p><strong>niter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>optional</em>) – The number of iteration (the default is None)</p></li>
+<li><p><strong>lambd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – Regularization factor (the default is 0.5)</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – The update step (the default is None, which means auto computed, see <a class="reference internal" href="#torchcs.recovery.ista_fista.upstep" title="torchcs.recovery.ista_fista.upstep"><code class="xref py py-func docutils literal notranslate"><span class="pre">upstep()</span></code></a>)</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – The tolerance of error (the default is 1e-6)</p></li>
+<li><p><strong>ssmode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – The type of softshrink function, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex-complex,
 <code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex-real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real-real.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>X</strong> – Reconstructed tensor <span class="math">\({\bf X} \in {\mathbb C}^{N\times L}\)</span></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tensor</p>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>X</strong> (<em>Tensor</em>) – Reconstructed tensor <span class="math">\({\bf X} \in {\mathbb C}^{N\times L}\)</span></p></li>
+<li><p>see <a class="reference internal" href="#torchcs.recovery.ista_fista.ista" title="torchcs.recovery.ista_fista.ista"><code class="xref py py-func docutils literal notranslate"><span class="pre">ista()</span></code></a>.</p></li>
+</ul>
+</p>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<a class="reference internal image-reference" href="_images/ISTAFISTAdemo.png"><img alt="_images/ISTAFISTAdemo.png" class="align-center" src="_images/ISTAFISTAdemo.png" style="width: 361.6px; height: 244.8px;" /></a>
+<p>The results shown in the above figure can be obtained by the following codes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcs</span> <span class="k">as</span> <span class="nn">tc</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">64</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">55</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">Phi</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">Phi</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">Psi</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">idctmtx</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="n">xista</span> <span class="o">=</span> <span class="n">ista</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span> <span class="n">niter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lambd</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">xfista</span> <span class="o">=</span> <span class="n">fista</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span> <span class="n">niter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lambd</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xista</span><span class="p">,</span> <span class="s1">&#39;b+&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xfista</span><span class="p">,</span> <span class="s1">&#39;r^&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;orig&#39;</span><span class="p">,</span> <span class="s1">&#39;ista&#39;</span><span class="p">,</span> <span class="s1">&#39;fista&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.recovery.ista_fista.ista">
-<code class="sig-prename descclassname">torchcs.recovery.ista_fista.</code><code class="sig-name descname">ista</code><span class="sig-paren">(</span><em class="sig-param">Y</em>, <em class="sig-param">Phi</em>, <em class="sig-param">niter=None</em>, <em class="sig-param">lambd=0.5</em>, <em class="sig-param">alpha=None</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">ssmode='cc'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.ista" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.recovery.ista_fista.ista">
+<span class="sig-prename descclassname"><span class="pre">torchcs.recovery.ista_fista.</span></span><span class="sig-name descname"><span class="pre">ista</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">niter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.ista" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterative Shrinkage Thresholding Algorithm</p>
 <p>Iterative Shrinkage Thresholding Algorithm</p>
 <div class="math">
@@ -227,34 +257,84 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Y</strong> (<em>Tensor</em>) – Observation <span class="math">\({\bf Y} \in {\mathbb C}^{M\times L}\)</span></p></li>
 <li><p><strong>Phi</strong> (<em>Tensor</em>) – Observation matrix <span class="math">\({\bf \Phi} \in {\mathbb C}^{M\times N}\)</span></p></li>
-<li><p><strong>niter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The number of iteration. (the default is None, which means Inf)</p></li>
-<li><p><strong>lambd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Regularization factor (the default is 0.5)</p></li>
-<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The update step (the default is None, which means auto computed)</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The tolerance of error (the default is 1e-6)</p></li>
-<li><p><strong>ssmode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – The type of softshrink function, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex-complex,
+<li><p><strong>niter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>optional</em>) – The number of iteration. (the default is None, which means Inf)</p></li>
+<li><p><strong>lambd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – Regularization factor (the default is 0.5)</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – The update step (the default is None, which means auto computed, see <a class="reference internal" href="#torchcs.recovery.ista_fista.upstep" title="torchcs.recovery.ista_fista.upstep"><code class="xref py py-func docutils literal notranslate"><span class="pre">upstep()</span></code></a>)</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – The tolerance of error (the default is 1e-6)</p></li>
+<li><p><strong>ssmode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – The type of softshrink function, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex-complex,
 <code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex-real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real-real.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>X</strong> – Reconstructed tensor <span class="math">\({\bf X} \in {\mathbb C}^{N\times L}\)</span></p>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>X</strong> (<em>Tensor</em>) – Reconstructed tensor <span class="math">\({\bf X} \in {\mathbb C}^{N\times L}\)</span></p></li>
+<li><p>see <a class="reference internal" href="#torchcs.recovery.ista_fista.fista" title="torchcs.recovery.ista_fista.fista"><code class="xref py py-func docutils literal notranslate"><span class="pre">fista()</span></code></a>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<a class="reference internal image-reference" href="_images/ISTAFISTAdemo.png"><img alt="_images/ISTAFISTAdemo.png" class="align-center" src="_images/ISTAFISTAdemo.png" style="width: 361.6px; height: 244.8px;" /></a>
+<p>The results shown in the above figure can be obtained by the following codes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcs</span> <span class="k">as</span> <span class="nn">tc</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">64</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">55</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">Phi</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">Phi</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">Psi</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">idctmtx</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="n">xista</span> <span class="o">=</span> <span class="n">ista</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span> <span class="n">niter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lambd</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">xfista</span> <span class="o">=</span> <span class="n">fista</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span> <span class="n">niter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lambd</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xista</span><span class="p">,</span> <span class="s1">&#39;b+&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xfista</span><span class="p">,</span> <span class="s1">&#39;r^&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;orig&#39;</span><span class="p">,</span> <span class="s1">&#39;ista&#39;</span><span class="p">,</span> <span class="s1">&#39;fista&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.recovery.ista_fista.upstep">
+<span class="sig-prename descclassname"><span class="pre">torchcs.recovery.ista_fista.</span></span><span class="sig-name descname"><span class="pre">upstep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.ista_fista.upstep" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes step size</p>
+<p>The update step size is computed by</p>
+<div class="math">
+\[\alpha = \frac{1}{{\rm max}(|\lambda|)}
+
+\]</div>
+<p>where <span class="math">\(\lambda\)</span> is the eigenvalue of <span class="math">\({\bf \Phi}^H{\bf \Phi}\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>Phi</strong> (<em>Tensor</em>) – The observation matrix.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The computed updation step size</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tensor</p>
+<dd class="field-odd"><p>scalar</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.recovery.matching_pursuit">
+</section>
+<section id="module-torchcs.recovery.matching_pursuit">
 <span id="torchcs-recovery-matching-pursuit-module"></span><h2>torchcs.recovery.matching_pursuit module<a class="headerlink" href="#module-torchcs.recovery.matching_pursuit" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.recovery.matching_pursuit.gp">
-<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">gp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.gp" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.recovery.matching_pursuit.gp">
+<span class="sig-prename descclassname"><span class="pre">torchcs.recovery.matching_pursuit.</span></span><span class="sig-name descname"><span class="pre">gp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.gp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="torchcs.recovery.matching_pursuit.mp">
-<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">mp</code><span class="sig-paren">(</span><em class="sig-param">X, D, K=None, norm=[False, True], tol=1e-06, mode=None, islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.mp" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.recovery.matching_pursuit.mp">
+<span class="sig-prename descclassname"><span class="pre">torchcs.recovery.matching_pursuit.</span></span><span class="sig-name descname"><span class="pre">mp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[False,</span> <span class="pre">True]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.mp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Matching Pursuit</p>
 <div class="math">
 \[x = Dz
@@ -280,12 +360,12 @@ then apply OMP on each column</p></li>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
+<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
 <li><p><strong>norm</strong> (<em>list of bool</em>) – The first element specifies whether to normalize data, the second element specifies
 whther to normalize dictionary. If True, will be normalized by subtracting the mean
 and dividing by the l2-norm. (default: [False, True])</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
-<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
 <code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex–&gt;real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real–&gt;real</p></li>
 <li><p><strong>islog</strong> (<em>boolean</em>) – Show more log info.</p></li>
 </ul>
@@ -293,9 +373,9 @@ and dividing by the l2-norm. (default: [False, True])</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.recovery.matching_pursuit.omp">
-<code class="sig-prename descclassname">torchcs.recovery.matching_pursuit.</code><code class="sig-name descname">omp</code><span class="sig-paren">(</span><em class="sig-param">X, D, K=None, C=1e-06, norm=[False, False], tol=1e-06, method='pinv', mode=None, device='cpu', islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.omp" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.recovery.matching_pursuit.omp">
+<span class="sig-prename descclassname"><span class="pre">torchcs.recovery.matching_pursuit.</span></span><span class="sig-name descname"><span class="pre">omp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[False,</span> <span class="pre">False]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pinv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.matching_pursuit.omp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Orthogonal Matching Pursuit</p>
 <p>ROMP add a small penalty factor <span class="math">\(C\)</span> to</p>
 <div class="math">
@@ -322,26 +402,87 @@ then apply OMP on each column</p></li>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
-<li><p><strong>C</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The regularization factor (default: 1.0e-6)</p></li>
+<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The sparse degree (default: size of <span class="math">\({\bm x}\)</span>)</p></li>
+<li><p><strong>C</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) – The regularization factor (default: 1.0e-6)</p></li>
 <li><p><strong>norm</strong> (<em>list of bool</em>) – The first element specifies whether to normalize data, the second element specifies
 whther to normalize dictionary. If True, will be normalized by subtracting the mean
 and dividing by the l2-norm. (default: [False, False])</p></li>
-<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
-<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The method for solving new sparse coefficients.</p></li>
-<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
+<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The method for solving new sparse coefficients.</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
 <code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex–&gt;real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real–&gt;real.</p></li>
 <li><p><strong>islog</strong> (<em>boolean</em>) – Show more log info.</p></li>
 </ul>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<a class="reference internal image-reference" href="_images/MPOMPdemo.png"><img alt="_images/MPOMPdemo.png" class="align-center" src="_images/MPOMPdemo.png" style="width: 650.4000000000001px; height: 404.0px;" /></a>
+<p>The results shown in the above figure can be obtained by the following codes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span> <span class="k">as</span> <span class="nn">th</span>
+<span class="kn">import</span> <span class="nn">torchcs</span> <span class="k">as</span> <span class="nn">tc</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">2021</span>
+<span class="n">f0</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">,</span> <span class="n">f3</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">400</span>
+<span class="n">Fs</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="n">Ts</span> <span class="o">=</span> <span class="mf">0.32</span>
+<span class="n">Ns</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">Ts</span> <span class="o">*</span> <span class="n">Fs</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Ns</span><span class="p">,</span> <span class="n">Ns</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Ns</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">Fs</span>
+<span class="n">pit2</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">th</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">t</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">th</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pit2</span> <span class="o">*</span> <span class="n">f0</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.6</span> <span class="o">*</span> <span class="n">th</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pit2</span> <span class="o">*</span> <span class="n">f1</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">th</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pit2</span> <span class="o">*</span> <span class="n">f2</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.9</span> <span class="o">*</span> <span class="n">th</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pit2</span> <span class="o">*</span> <span class="n">f3</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">Fs</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="n">Fs</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="n">Ns</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Ns</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">th</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">Ns</span>
+<span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">Ns</span> <span class="o">*</span> <span class="n">R</span><span class="p">)</span>
+<span class="n">Psi</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">odctdict</span><span class="p">((</span><span class="n">M</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+<span class="c1"># Psi = tc.idctmtx(N)</span>
+
+<span class="n">z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Psi</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1.0e-6</span><span class="p">,</span> <span class="n">islog</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">xmp</span> <span class="o">=</span> <span class="n">Psi</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">Xmp</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">th</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">xmp</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="n">z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">omp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Psi</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">1e-1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1.0e-6</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;pinv&#39;</span><span class="p">,</span> <span class="n">islog</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">xomp</span> <span class="o">=</span> <span class="n">Psi</span><span class="o">.</span><span class="n">mm</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">Xomp</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">th</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">xomp</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="n">xgp</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">Xgp</span> <span class="o">=</span> <span class="n">X</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;-r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">abs</span><span class="p">(),</span> <span class="s1">&#39;-r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">223</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;-*r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xmp</span><span class="p">,</span> <span class="s1">&#39;-sg&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xomp</span><span class="p">,</span> <span class="s1">&#39;-+b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xgp</span><span class="p">,</span> <span class="s1">&#39;--k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Real&#39;</span><span class="p">,</span> <span class="s1">&#39;MP&#39;</span><span class="p">,</span> <span class="s1">&#39;OMP&#39;</span><span class="p">,</span> <span class="s1">&#39;GP&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">abs</span><span class="p">(),</span> <span class="s1">&#39;-*r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xmp</span><span class="o">.</span><span class="n">abs</span><span class="p">(),</span> <span class="s1">&#39;-sg&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xomp</span><span class="o">.</span><span class="n">abs</span><span class="p">(),</span> <span class="s1">&#39;-+b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Xgp</span><span class="o">.</span><span class="n">abs</span><span class="p">(),</span> <span class="s1">&#39;--k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Real&#39;</span><span class="p">,</span> <span class="s1">&#39;MP&#39;</span><span class="p">,</span> <span class="s1">&#39;OMP&#39;</span><span class="p">,</span> <span class="s1">&#39;GP&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.recovery">
+</section>
+<section id="module-torchcs.recovery">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchcs.recovery" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -354,7 +495,7 @@ and dividing by the l2-norm. (default: [False, False])</p></li>
         <a href="torchcs.sensing.html" class="btn btn-neutral float-right" title="torchcs.sensing package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="torchcs.misc.html" class="btn btn-neutral float-left" title="torchcs.misc package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="torchcs.dictionary.html" class="btn btn-neutral float-left" title="torchcs.dictionary package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

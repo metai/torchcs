@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>torchcs &mdash; torchcs 1.0 documentation</title>
@@ -13,7 +14,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
 
   
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
         <script src="_static/katex_autorenderer.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -41,7 +44,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchcs package" href="torchcs.html" />
+    <link rel="next" title="setup module" href="setup.html" />
     <link rel="prev" title="Welcome to torchcs’s documentation!" href="index.html" /> 
 </head>
 
@@ -90,6 +93,7 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">torchcs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchcs.html">torchcs package</a></li>
 </ul>
 </li>
@@ -158,21 +162,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="torchcs">
+  <section id="torchcs">
 <h1>torchcs<a class="headerlink" href="#torchcs" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torchcs.html">torchcs package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="torchcs.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="torchcs.base.html">torchcs.base package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html#module-torchcs.base.arrayops">torchcs.base.arrayops module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html#module-torchcs.base.baseops">torchcs.base.baseops module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html#module-torchcs.base.mathops">torchcs.base.mathops module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html#module-torchcs.base.randomfunc">torchcs.base.randomfunc module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html#module-torchcs.base">Module contents</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="torchcs.dictionary.html">torchcs.dictionary package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.dictionary.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.dictionary.html#module-torchcs.dictionary.dcts">torchcs.dictionary.dcts module</a></li>
@@ -180,12 +176,6 @@
 <li class="toctree-l4"><a class="reference internal" href="torchcs.dictionary.html#module-torchcs.dictionary.dictshow">torchcs.dictionary.dictshow module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.dictionary.html#module-torchcs.dictionary.dwts">torchcs.dictionary.dwts module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.dictionary.html#module-torchcs.dictionary">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="torchcs.misc.html">torchcs.misc package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.misc.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.misc.html#module-torchcs.misc.sampling">torchcs.misc.sampling module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.misc.html#module-torchcs.misc">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchcs.recovery.html">torchcs.recovery package</a><ul>
@@ -210,26 +200,16 @@
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sharing.html#module-torchcs.sharing">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="torchcs.utils.html">torchcs.utils package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#module-torchcs.utils.colors">torchcs.utils.colors module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#module-torchcs.utils.const">torchcs.utils.const module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#module-torchcs.utils.convert">torchcs.utils.convert module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#module-torchcs.utils.file">torchcs.utils.file module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#module-torchcs.utils.image">torchcs.utils.image module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#module-torchcs.utils.ios">torchcs.utils.ios module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#module-torchcs.utils.plot_show">torchcs.utils.plot_show module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html#module-torchcs.utils">Module contents</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="torchcs.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchcs.html#module-torchcs.version">torchcs.version module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchcs.html#module-torchcs">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
+</section>
 
 
            </div>
@@ -239,7 +219,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="torchcs.html" class="btn btn-neutral float-right" title="torchcs package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="setup.html" class="btn btn-neutral float-right" title="setup module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Welcome to torchcs’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

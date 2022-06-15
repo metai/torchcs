@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>torchcs.dictionary package &mdash; torchcs 1.0 documentation</title>
@@ -13,7 +14,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
 
   
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
         <script src="_static/katex_autorenderer.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -41,8 +44,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchcs.misc package" href="torchcs.misc.html" />
-    <link rel="prev" title="torchcs.base package" href="torchcs.base.html" /> 
+    <link rel="next" title="torchcs.recovery package" href="torchcs.recovery.html" />
+    <link rel="prev" title="torchcs package" href="torchcs.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,17 +93,17 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchcs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="torchcs.html">torchcs package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="torchcs.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html">torchcs.base package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchcs.dictionary package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.misc.html">torchcs.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.recovery.html">torchcs.recovery package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sensing.html">torchcs.sensing package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sharing.html">torchcs.sharing package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html">torchcs.utils package</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs.version">torchcs.version module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs">Module contents</a></li>
 </ul>
 </li>
@@ -175,16 +178,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="torchcs-dictionary-package">
+  <section id="torchcs-dictionary-package">
 <h1>torchcs.dictionary package<a class="headerlink" href="#torchcs-dictionary-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-torchcs.dictionary.dcts">
+</section>
+<section id="module-torchcs.dictionary.dcts">
 <span id="torchcs-dictionary-dcts-module"></span><h2>torchcs.dictionary.dcts module<a class="headerlink" href="#module-torchcs.dictionary.dcts" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.dct1">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">dct1</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.dct1" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.dct1">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">dct1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.dct1" title="Permalink to this definition">¶</a></dt>
 <dd><p>1-Dimension Discrete cosine transform</p>
 <blockquote>
 <div><p>The DCT of signal <span class="math">\(x[n], n=0, 1,\cdots, N-1\)</span> is expressed as</p>
@@ -215,9 +218,9 @@ IEEE Transactions on Computers, C-23(1):90–93, 1974. doi:10.1109/T-C.1974.2237
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.dct2">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">dct2</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.dct2" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.dct2">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">dct2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.dct2" title="Permalink to this definition">¶</a></dt>
 <dd><p>2-Dimension Discrete cosine transform</p>
 <p>dct1(dct1(X, axis=0), axis=1)</p>
 <dl class="field-list simple">
@@ -233,9 +236,9 @@ IEEE Transactions on Computers, C-23(1):90–93, 1974. doi:10.1109/T-C.1974.2237
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.dctdict">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">dctdict</code><span class="sig-paren">(</span><em class="sig-param">N</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.dctdict" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.dctdict">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">dctdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isnorm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.dctdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Complete DCT dictionary</p>
 <div class="math" id="equation-equ-dct-matrix">
 <span class="eqno">(2)<a class="headerlink" href="#equation-equ-dct-matrix" title="Permalink to this equation">¶</a></span>\[{\bm D} = \sqrt{\frac{2}{N}}\left[\begin{array}{cccc}{1/\sqrt{2}} & {1/\sqrt{2}} & {1/\sqrt{2}} & {\cdots} & {1/\sqrt{2}} \\ {\cos \frac{\pi}{2 N}} & {\cos \frac{3 \pi}{2 N}} & {\cos \frac{5 \pi}{2 N}} & {\cdots} & {\cos \frac{(2 N-1) \pi}{2 N}} \\ {\vdots} & {\vdots} & {\vdots} & {\vdots} \\ {\cos \frac{(N-1) \pi}{2 N}} & {\cos \frac{3(N-1) \pi}{2 N}} & {\cos \frac{5(N-1) \pi}{2 N}} & {\cdots} & {\cos \frac{(2 N-1)(N-1) \pi}{2 N}}\end{array}\right]
@@ -245,7 +248,7 @@ IEEE Transactions on Computers, C-23(1):90–93, 1974. doi:10.1109/T-C.1974.2237
 So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The dictionary is of size <span class="math">\(N\times N\)</span></p>
+<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The dictionary is of size <span class="math">\(N\times N\)</span></p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>D</strong> – DCT dictionary ( <span class="math">\({\bm D}^T\)</span> ).</p>
@@ -256,9 +259,9 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.dctmtx">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">dctmtx</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.dctmtx" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.dctmtx">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">dctmtx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.dctmtx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Discrete cosine transform matrix</p>
 <div class="math" id="equation-equ-dct-matrixrep">
 <span class="eqno">(3)<a class="headerlink" href="#equation-equ-dct-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm y} = {\bm D}{\bm x}
@@ -271,7 +274,7 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – signal dimesion.</p>
+<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – signal dimesion.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>T</strong> – DCT matrix.</p>
@@ -282,9 +285,9 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.idct1">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">idct1</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.idct1" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.idct1">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">idct1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.idct1" title="Permalink to this definition">¶</a></dt>
 <dd><p>1-Dimension Inverse Discrete cosine transform</p>
 <div class="math" id="equation-equ-idct-matrixrep">
 <span class="eqno">(5)<a class="headerlink" href="#equation-equ-idct-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm x} = {\bm D}^{-1}{\bm y} = {\bm D}^T{\bm y}
@@ -306,9 +309,9 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.idct2">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">idct2</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.idct2" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.idct2">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">idct2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.idct2" title="Permalink to this definition">¶</a></dt>
 <dd><p>2-Dimension Inverse Discrete cosine transform</p>
 <p>idct1(idct1(X, axis=0), axis=1)</p>
 <dl class="field-list simple">
@@ -324,9 +327,9 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.idctmtx">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">idctmtx</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.idctmtx" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.idctmtx">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">idctmtx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.idctmtx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inverse discrete cosine transform matrix</p>
 <div class="math" id="equation-equ-dct-matrixrep">
 <span class="eqno">(6)<a class="headerlink" href="#equation-equ-dct-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm x} = {\bm D}{\bm z}
@@ -339,7 +342,7 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – signal dimesion.</p>
+<dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – signal dimesion.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>T</strong> – IDCT matrix.</p>
@@ -350,9 +353,9 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.odctdict">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">odctdict</code><span class="sig-paren">(</span><em class="sig-param">dictshape</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.odctdict" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.odctdict">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">odctdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictshape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isnorm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.odctdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overcomplete 1D-DCT dictionary</p>
 <div class="math" id="equation-equ-odct-matrix">
 <span class="eqno">(8)<a class="headerlink" href="#equation-equ-odct-matrix" title="Permalink to this equation">¶</a></span>\[{\bm D} = \sqrt{\frac{2}{N}}\left[\begin{array}{cccc}{1/\sqrt{2}} & {1/\sqrt{2}} & {1/\sqrt{2}} & {\cdots} & {1/\sqrt{2}} \\ {\cos \frac{\pi}{2 N}} & {\cos \frac{3 \pi}{2 N}} & {\cos \frac{5 \pi}{2 N}} & {\cdots} & {\cos \frac{(2 N-1) \pi}{2 N}} \\ {\vdots} & {\vdots} & {\vdots} & {\vdots} \\ {\cos \frac{(M-1) \pi}{2 N}} & {\cos \frac{3(M-1) \pi}{2 N}} & {\cos \frac{5(M-1) \pi}{2 N}} & {\cdots} & {\cos \frac{(2 N-1)(M-1) \pi}{2 N}}\end{array}\right]
@@ -364,20 +367,20 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dictshape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a>) – dictionary shape</p>
+<dd class="field-odd"><p><strong>dictshape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a>) – dictionary shape</p>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>isnorm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – normlize atoms (default: True)</p></li>
-<li><p><strong>islog</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – display log (default: False)</p></li>
+<li><p><strong>isnorm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – normlize atoms (default: True)</p></li>
+<li><p><strong>islog</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – display log (default: False)</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dcts.odctndict">
-<code class="sig-prename descclassname">torchcs.dictionary.dcts.</code><code class="sig-name descname">odctndict</code><span class="sig-paren">(</span><em class="sig-param">dictshape</em>, <em class="sig-param">axis=-1</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.odctndict" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dcts.odctndict">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dcts.</span></span><span class="sig-name descname"><span class="pre">odctndict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictshape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isnorm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dcts.odctndict" title="Permalink to this definition">¶</a></dt>
 <dd><p>generates Overcomplete nD-DCT dictionary</p>
 <div class="math" id="equation-equ-createnddct-matrix">
 <span class="eqno">(10)<a class="headerlink" href="#equation-equ-createnddct-matrix" title="Permalink to this equation">¶</a></span>\[{\bm D}_{nd} = {\bm D}_{(n-1)d} \otimes {\bm D}_{(n-1)d}.
@@ -404,12 +407,12 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.dictionary.dfts">
+</section>
+<section id="module-torchcs.dictionary.dfts">
 <span id="torchcs-dictionary-dfts-module"></span><h2>torchcs.dictionary.dfts module<a class="headerlink" href="#module-torchcs.dictionary.dfts" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.dft1">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">dft1</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dft1" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.dft1">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">dft1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dft1" title="Permalink to this definition">¶</a></dt>
 <dd><p>1-Dimension Discrete Fourier transform</p>
 <blockquote>
 <div><p>The DFT of signal <span class="math">\(x[n], n=0, 1,\cdots, N-1\)</span> is expressed as</p>
@@ -430,9 +433,9 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.dft2">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">dft2</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dft2" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.dft2">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">dft2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dft2" title="Permalink to this definition">¶</a></dt>
 <dd><p>2-Dimension Discrete cosine transform</p>
 <p>dft1(dft1(X, axis=0), axis=1)</p>
 <dl class="field-list simple">
@@ -448,9 +451,9 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.dftdict">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">dftdict</code><span class="sig-paren">(</span><em class="sig-param">N</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dftdict" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.dftdict">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">dftdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isnorm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dftdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Complete DFT dictionary</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -465,9 +468,9 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.dftmtx">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">dftmtx</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dftmtx" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.dftmtx">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">dftmtx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.dftmtx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Discrete Fourier transform matrix</p>
 <div class="math" id="equation-equ-dft-matrixrep">
 <span class="eqno">(11)<a class="headerlink" href="#equation-equ-dft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm y} = {\bm D}{\bm x}
@@ -487,9 +490,9 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.idft1">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">idft1</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.idft1" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.idft1">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">idft1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.idft1" title="Permalink to this definition">¶</a></dt>
 <dd><p>1-Dimension Inverse Discrete cosine transform</p>
 <div class="math" id="equation-equ-idft-matrixrep">
 <span class="eqno">(12)<a class="headerlink" href="#equation-equ-idft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm x} = {\bm D}^{-1}{\bm y} = {\bm D}^T{\bm y}
@@ -511,9 +514,9 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.idft2">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">idft2</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.idft2" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.idft2">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">idft2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.idft2" title="Permalink to this definition">¶</a></dt>
 <dd><p>2-Dimension Inverse Discrete cosine transform</p>
 <p>idft1(idft1(X, axis=0), axis=1)</p>
 <dl class="field-list simple">
@@ -529,9 +532,9 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.idftmtx">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">idftmtx</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.idftmtx" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.idftmtx">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">idftmtx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.idftmtx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Discrete Fourier transform matrix</p>
 <div class="math" id="equation-equ-dft-matrixrep">
 <span class="eqno">(13)<a class="headerlink" href="#equation-equ-dft-matrixrep" title="Permalink to this equation">¶</a></span>\[{\bm y} = {\bm D}{\bm x}
@@ -551,26 +554,26 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.odftdict">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">odftdict</code><span class="sig-paren">(</span><em class="sig-param">dictshape</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.odftdict" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.odftdict">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">odftdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictshape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isnorm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.odftdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overcomplete 1D-DFT dictionary</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dictshape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a>) – dictionary shape</p>
+<dd class="field-odd"><p><strong>dictshape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a>) – dictionary shape</p>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>isnorm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – normlize atoms (default: True)</p></li>
-<li><p><strong>islog</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – display log (default: False)</p></li>
+<li><p><strong>isnorm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – normlize atoms (default: True)</p></li>
+<li><p><strong>islog</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – display log (default: False)</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="torchcs.dictionary.dfts.odftndict">
-<code class="sig-prename descclassname">torchcs.dictionary.dfts.</code><code class="sig-name descname">odftndict</code><span class="sig-paren">(</span><em class="sig-param">dictshape</em>, <em class="sig-param">axis=-1</em>, <em class="sig-param">isnorm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.odftndict" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dfts.odftndict">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dfts.</span></span><span class="sig-name descname"><span class="pre">odftndict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictshape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isnorm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islog</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dfts.odftndict" title="Permalink to this definition">¶</a></dt>
 <dd><p>generates Overcomplete nD-DFT dictionary</p>
 <div class="math" id="equation-equ-createnddft-matrix">
 <span class="eqno">(14)<a class="headerlink" href="#equation-equ-createnddft-matrix" title="Permalink to this equation">¶</a></span>\[{\bm D}_{nd} = {\bm D}_{(n-1)d} \otimes {\bm D}_{(n-1)d}.
@@ -597,58 +600,58 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.dictionary.dictshow">
+</section>
+<section id="module-torchcs.dictionary.dictshow">
 <span id="torchcs-dictionary-dictshow-module"></span><h2>torchcs.dictionary.dictshow module<a class="headerlink" href="#module-torchcs.dictionary.dictshow" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.dictionary.dictshow.dictshow">
-<code class="sig-prename descclassname">torchcs.dictionary.dictshow.</code><code class="sig-name descname">dictshow</code><span class="sig-paren">(</span><em class="sig-param">D</em>, <em class="sig-param">rcsize=None</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">plot=True</em>, <em class="sig-param">bgcolorv=0</em>, <em class="sig-param">cmap=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">xlabel=None</em>, <em class="sig-param">ylabel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dictshow.dictshow" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dictshow.dictshow">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dictshow.</span></span><span class="sig-name descname"><span class="pre">dictshow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rcsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stride</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bgcolorv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dictshow.dictshow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Trys to show image blocks in one image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>D</strong> (<em>array_like</em>) – Blocks to be shown, a bH-bW-bC-bN numpy ndarray.</p></li>
-<li><p><strong>rcsize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – Specifies how many rows and cols of blocks that you want to show,
+<li><p><strong>rcsize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a><em>, </em><em>optional</em>) – Specifies how many rows and cols of blocks that you want to show,
 e.g. (rows, cols). If not given, rcsize=(rows, clos) will be computed
 automaticly.</p></li>
-<li><p><strong>stride</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – The step size (blank pixels nums) in row and col between two blocks.
+<li><p><strong>stride</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a><em>, </em><em>optional</em>) – The step size (blank pixels nums) in row and col between two blocks.
 If not given, stride=(1,1).</p></li>
-<li><p><strong>plot</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – True for ploting, False for silent and returns a H-W-C numpy ndarray
+<li><p><strong>plot</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – True for ploting, False for silent and returns a H-W-C numpy ndarray
 for showing.</p></li>
-<li><p><strong>bgcolorv</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – The background color, 1 for white, 0 for black. Default, 0.</p></li>
+<li><p><strong>bgcolorv</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a><em>, </em><em>optional</em>) – The background color, 1 for white, 0 for black. Default, 0.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>out</strong> – A H-W-C numpy ndarray for showing.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray or <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></p>
+<dd class="field-odd"><p>ndarray or <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)">bool</a></p>
 </dd>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">odctdict.()</span></code></p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">odctdict.</span></code></p>
 </div>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">D</span> <span class="o">=</span> <span class="n">pys</span><span class="o">.</span><span class="n">odctdict</span><span class="p">((</span><span class="n">M</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">D</span> <span class="o">=</span> <span class="n">pys</span><span class="o">.</span><span class="n">odctdict</span><span class="p">((</span><span class="n">M</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">showdict</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.dictionary.dwts">
+</section>
+<section id="module-torchcs.dictionary.dwts">
 <span id="torchcs-dictionary-dwts-module"></span><h2>torchcs.dictionary.dwts module<a class="headerlink" href="#module-torchcs.dictionary.dwts" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.dictionary.dwts.dwt">
-<code class="sig-prename descclassname">torchcs.dictionary.dwts.</code><code class="sig-name descname">dwt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dwts.dwt" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.dictionary.dwts.dwt">
+<span class="sig-prename descclassname"><span class="pre">torchcs.dictionary.dwts.</span></span><span class="sig-name descname"><span class="pre">dwt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.dictionary.dwts.dwt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.dictionary">
+</section>
+<section id="module-torchcs.dictionary">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchcs.dictionary" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -658,10 +661,10 @@ for showing.</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="torchcs.misc.html" class="btn btn-neutral float-right" title="torchcs.misc package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="torchcs.recovery.html" class="btn btn-neutral float-right" title="torchcs.recovery package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="torchcs.base.html" class="btn btn-neutral float-left" title="torchcs.base package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="torchcs.html" class="btn btn-neutral float-left" title="torchcs package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

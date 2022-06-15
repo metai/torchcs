@@ -5,14 +5,23 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
-   torchcs.base
    torchcs.dictionary
-   torchcs.misc
    torchcs.recovery
    torchcs.sensing
    torchcs.sharing
-   torchcs.utils
+
+Submodules
+----------
+
+torchcs.version module
+----------------------
+
+.. automodule:: torchcs.version
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 Module contents
 ---------------

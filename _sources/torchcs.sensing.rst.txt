@@ -28,7 +28,6 @@ torchcs.sensing.toeplitz module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

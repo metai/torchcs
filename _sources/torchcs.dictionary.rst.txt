@@ -36,7 +36,6 @@ torchcs.dictionary.dwts module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

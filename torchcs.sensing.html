@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>torchcs.sensing package &mdash; torchcs 1.0 documentation</title>
@@ -13,7 +14,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
 
   
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
         <script src="_static/katex_autorenderer.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -90,17 +93,17 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchcs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="torchcs.html">torchcs package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="torchcs.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="torchcs.base.html">torchcs.base package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.dictionary.html">torchcs.dictionary package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.misc.html">torchcs.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.recovery.html">torchcs.recovery package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchcs.sensing package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sharing.html">torchcs.sharing package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchcs.utils.html">torchcs.utils package</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs.version">torchcs.version module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torchcs.html#module-torchcs">Module contents</a></li>
 </ul>
 </li>
@@ -175,29 +178,74 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="torchcs-sensing-package">
+  <section id="torchcs-sensing-package">
 <h1>torchcs.sensing package<a class="headerlink" href="#torchcs-sensing-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-torchcs.sensing.bernoullis">
+</section>
+<section id="module-torchcs.sensing.bernoullis">
 <span id="torchcs-sensing-bernoullis-module"></span><h2>torchcs.sensing.bernoullis module<a class="headerlink" href="#module-torchcs.sensing.bernoullis" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.sensing.bernoullis.bernoulli">
-<code class="sig-prename descclassname">torchcs.sensing.bernoullis.</code><code class="sig-name descname">bernoulli</code><span class="sig-paren">(</span><em class="sig-param">shape</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">norm=True</em>, <em class="sig-param">verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.sensing.bernoullis.bernoulli" title="Permalink to this definition">¶</a></dt>
-<dd><p>return a matrix,
-which have bernoulli distribution elements
-columns are l2 normalized</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.sensing.bernoullis.bernoulli">
+<span class="sig-prename descclassname"><span class="pre">torchcs.sensing.bernoullis.</span></span><span class="sig-name descname"><span class="pre">bernoulli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmmean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float32'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.sensing.bernoullis.bernoulli" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates Bernoulli observation matrix</p>
+<p>Generates M-by-N Bernoulli observation matrix which have Bernoulli distribution elements(
+columns are l2 normalized).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a>) – shape of Gauss observation matrix [M, N]</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a><em>, </em><em>optional</em>) – the seed for random number generator, by default None</p></li>
+<li><p><strong>norm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – normalize the columns of observation matrix, by default True</p></li>
+<li><p><strong>rmmean</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – remove the mean values before normalization, by default False</p></li>
+<li><p><strong>dtype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – torch’s data type, such as <code class="docutils literal notranslate"><span class="pre">'float32'</span></code>, <code class="docutils literal notranslate"><span class="pre">'float64'</span></code>, <code class="docutils literal notranslate"><span class="pre">'complex64'</span></code>, <code class="docutils literal notranslate"><span class="pre">'complex128'</span></code>, by default <code class="docutils literal notranslate"><span class="pre">'float32'</span></code></p></li>
+<li><p><strong>device</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – generates data on the specified device, supported are <code class="docutils literal notranslate"><span class="pre">'cpu'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cuda:x'</span></code>, where, <cite>x</cite> is the cuda device’s id.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Bernoulli observation matrix <span class="math">\(\bm A\)</span>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>th.Tensor</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<a class="reference internal image-reference" href="_images/BernoulliMatrix.png"><img alt="_images/BernoulliMatrix.png" class="align-center" src="_images/BernoulliMatrix.png" style="width: 432.8px; height: 370.40000000000003px;" /></a>
+<p>The results shown in the above figure can be obtained by the following codes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcs</span> <span class="k">as</span> <span class="nn">tc</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">PhiReal</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">bernoulli</span><span class="p">((</span><span class="mi">32</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+<span class="n">PhiCplx</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">bernoulli</span><span class="p">((</span><span class="mi">32</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;complex64&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">PhiReal</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">411</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiReal</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Real-valued&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">412</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">abs</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Complex-valued (amplitude)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">413</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Complex-valued (real part)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">414</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Complex-valued (imaginary part)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.sensing.gaussians">
+</section>
+<section id="module-torchcs.sensing.gaussians">
 <span id="torchcs-sensing-gaussians-module"></span><h2>torchcs.sensing.gaussians module<a class="headerlink" href="#module-torchcs.sensing.gaussians" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.sensing.gaussians.gaussian">
-<code class="sig-prename descclassname">torchcs.sensing.gaussians.</code><code class="sig-name descname">gaussian</code><span class="sig-paren">(</span><em class="sig-param">shape</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">norm=True</em>, <em class="sig-param">islog=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.sensing.gaussians.gaussian" title="Permalink to this definition">¶</a></dt>
-<dd><p>generates Gauss observation matrix</p>
-<p>Generates M-by-N Gauss observation matrix which have gaussian distribution elements(
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.sensing.gaussians.gaussian">
+<span class="sig-prename descclassname"><span class="pre">torchcs.sensing.gaussians.</span></span><span class="sig-name descname"><span class="pre">gaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmmean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float32'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.sensing.gaussians.gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates Gaussian observation matrix</p>
+<p>Generates M-by-N Gaussian observation matrix which have gaussian distribution elements(
 columns are l2 normalized).</p>
 <div class="math">
 \[{\bm \Phi} \sim {\mathcal N}(0, \frac{1}{M})
@@ -205,26 +253,57 @@ columns are l2 normalized).</p>
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a>) – shape of Gauss observation matrix [M, N]</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a>) – shape of Gauss observation matrix [M, N]</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a><em>, </em><em>optional</em>) – the seed of the random number generator, by default None</p></li>
+<li><p><strong>norm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – normalize the columns of observation matrix, by default True</p></li>
+<li><p><strong>rmmean</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – remove the mean values before normalization, by default True</p></li>
+<li><p><strong>dtype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – torch’s data type, such as <code class="docutils literal notranslate"><span class="pre">'float32'</span></code>, <code class="docutils literal notranslate"><span class="pre">'float64'</span></code>, <code class="docutils literal notranslate"><span class="pre">'complex64'</span></code>, <code class="docutils literal notranslate"><span class="pre">'complex128'</span></code>, by default <code class="docutils literal notranslate"><span class="pre">'float32'</span></code></p></li>
+<li><p><strong>device</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – generates data on the specified device, supported are <code class="docutils literal notranslate"><span class="pre">'cpu'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cuda:x'</span></code>, where, <cite>x</cite> is the cuda device’s id.</p></li>
+</ul>
 </dd>
-<dt class="field-even">Keyword Arguments</dt>
-<dd class="field-even"><p><strong>islog</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – display log info (default: {True})</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gauss observation matrix <span class="math">\(\bm A\)</span>.</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>A</strong> – Gauss observation matrix <span class="math">\(\bm A\)</span>.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><cite>ndarray</cite></p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>th.Tensor</p>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<a class="reference internal image-reference" href="_images/GaussianMatrix.png"><img alt="_images/GaussianMatrix.png" class="align-center" src="_images/GaussianMatrix.png" style="width: 431.20000000000005px; height: 374.40000000000003px;" /></a>
+<p>The results shown in the above figure can be obtained by the following codes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchcs</span> <span class="k">as</span> <span class="nn">tc</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">PhiReal</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">gaussian</span><span class="p">((</span><span class="mi">32</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+<span class="n">PhiCplx</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">gaussian</span><span class="p">((</span><span class="mi">32</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;complex64&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">PhiReal</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">411</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiReal</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Real-valued&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">412</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">abs</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Complex-valued (amplitude)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">413</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Complex-valued (real part)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">414</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Complex-valued (imaginary part)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.sensing.toeplitz">
+</section>
+<section id="module-torchcs.sensing.toeplitz">
 <span id="torchcs-sensing-toeplitz-module"></span><h2>torchcs.sensing.toeplitz module<a class="headerlink" href="#module-torchcs.sensing.toeplitz" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchcs.sensing.toeplitz.toeplitz">
-<code class="sig-prename descclassname">torchcs.sensing.toeplitz.</code><code class="sig-name descname">toeplitz</code><span class="sig-paren">(</span><em class="sig-param">shape</em>, <em class="sig-param">verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.sensing.toeplitz.toeplitz" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.sensing.toeplitz.toeplitz">
+<span class="sig-prename descclassname"><span class="pre">torchcs.sensing.toeplitz.</span></span><span class="sig-name descname"><span class="pre">toeplitz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.sensing.toeplitz.toeplitz" title="Permalink to this definition">¶</a></dt>
 <dd><p>generates Toeplitz observation matrix</p>
 <p>Generates M-by-N Toeplitz observation matrix</p>
 <div class="math">
@@ -247,11 +326,11 @@ columns are l2 normalized).</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-torchcs.sensing">
+</section>
+<section id="module-torchcs.sensing">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchcs.sensing" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
