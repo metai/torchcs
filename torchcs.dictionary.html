@@ -92,6 +92,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchcs</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="torchcs.html">torchcs package</a><ul class="current">
@@ -100,6 +101,7 @@
 <li class="toctree-l4"><a class="reference internal" href="torchcs.recovery.html">torchcs.recovery package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sensing.html">torchcs.sensing package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sharing.html">torchcs.sharing package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchcs.signal.html">torchcs.signal package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchcs.html#submodules">Submodules</a></li>
@@ -204,16 +206,16 @@
 IEEE Transactions on Computers, C-23(1):90–93, 1974. doi:10.1109/T-C.1974.223784</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>x</strong> (<em>torch tensor</em>) – signal vector or matrix</p>
+<dd class="field-odd"><p><strong>tensor</strong> (<em>x</em>) – signal vector or matrix</p>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><p><strong>axis</strong> (<em>number</em>) – transformation axis when x is a matrix (default: {0}, col)</p>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>y</strong> – the coefficients.</p>
+<dd class="field-odd"><p>the coefficients.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>torch tensor</p>
+<dd class="field-even"><p>y tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -225,13 +227,13 @@ IEEE Transactions on Computers, C-23(1):90–93, 1974. doi:10.1109/T-C.1974.2237
 <p>dct1(dct1(X, axis=0), axis=1)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>X</strong> (<em>torch tensor</em>) – signal matrix</p>
+<dd class="field-odd"><p><strong>tensor</strong> (<em>X</em>) – signal matrix</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>Y</strong> – coefficients matrix</p>
+<dd class="field-even"><p>coefficients matrix</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>torch tensor</p>
+<dd class="field-odd"><p>Y tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -251,10 +253,10 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The dictionary is of size <span class="math">\(N\times N\)</span></p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>D</strong> – DCT dictionary ( <span class="math">\({\bm D}^T\)</span> ).</p>
+<dd class="field-even"><p>DCT dictionary ( <span class="math">\({\bm D}^T\)</span> ).</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>torch tensor</p>
+<dd class="field-odd"><p>D tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -277,10 +279,10 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – signal dimesion.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>T</strong> – DCT matrix.</p>
+<dd class="field-even"><p>DCT matrix.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>torch tensor</p>
+<dd class="field-odd"><p>T tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -295,16 +297,16 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 \]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>y</strong> (<em>torch tensor</em>) – coefficients</p>
+<dd class="field-odd"><p><strong>tensor</strong> (<em>y</em>) – coefficients</p>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><p><strong>axis</strong> (<em>number</em>) – IDCT along which axis (default: {0})</p>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>x</strong> – recovered signal.</p>
+<dd class="field-odd"><p>recovered signal.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>torch tensor</p>
+<dd class="field-even"><p>x tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -316,13 +318,13 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <p>idct1(idct1(X, axis=0), axis=1)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>X</strong> (<em>torch tensor</em>) – signal matrix</p>
+<dd class="field-odd"><p><strong>tensor</strong> (<em>X</em>) – signal matrix</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>Y</strong> – coefficients matrix</p>
+<dd class="field-even"><p>coefficients matrix</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>torch tensor</p>
+<dd class="field-odd"><p>Y tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -345,10 +347,10 @@ So, <span class="math">\({\bm x} = {\bm D}^T{\bm z}\)</span></p>
 <dd class="field-odd"><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – signal dimesion.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>T</strong> – IDCT matrix.</p>
+<dd class="field-even"><p>IDCT matrix.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>torch tensor</p>
+<dd class="field-odd"><p>T tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -482,10 +484,10 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 <dd class="field-odd"><p><strong>N</strong> (<em>integer</em>) – signal dimesion.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>T</strong> – DFT matrix.</p>
+<dd class="field-even"><p>DFT matrix.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>torch tensor</p>
+<dd class="field-odd"><p>T tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -546,10 +548,10 @@ is multidimensional(default=-1) (default: {-1})</p></li>
 <dd class="field-odd"><p><strong>N</strong> (<em>integer</em>) – signal dimesion.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>T</strong> – DFT matrix.</p>
+<dd class="field-even"><p>DFT matrix.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>torch tensor</p>
+<dd class="field-odd"><p>T tensor</p>
 </dd>
 </dl>
 </dd></dl>

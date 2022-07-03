@@ -4,6 +4,14 @@ torchcs.recovery package
 Submodules
 ----------
 
+torchcs.recovery.dlmlcs module
+------------------------------
+
+.. automodule:: torchcs.recovery.dlmlcs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 torchcs.recovery.ista\_fista module
 -----------------------------------
 

@@ -92,6 +92,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchcs</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="torchcs.html">torchcs package</a><ul class="current">
@@ -100,6 +101,7 @@
 <li class="toctree-l4"><a class="reference internal" href="torchcs.recovery.html">torchcs.recovery package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchcs.sensing package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sharing.html">torchcs.sharing package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchcs.signal.html">torchcs.signal package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchcs.html#submodules">Submodules</a></li>
@@ -233,6 +235,87 @@ columns are l2 normalized).</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">414</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">PhiCplx</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Complex-valued (imaginary part)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-torchcs.sensing.binary">
+<span id="torchcs-sensing-binary-module"></span><h2>torchcs.sensing.binary module<a class="headerlink" href="#module-torchcs.sensing.binary" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.sensing.binary.brandom">
+<span class="sig-prename descclassname"><span class="pre">torchcs.sensing.binary.</span></span><span class="sig-name descname"><span class="pre">brandom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float32'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.sensing.binary.brandom" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates binary-random subsampling matrix</p>
+<p>Generates M-by-N binary-random observation matrix which have uniform distribution elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a>) – shape of Gauss observation matrix [M, N]</p></li>
+<li><p><strong>dtype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – torch’s data type, such as <code class="docutils literal notranslate"><span class="pre">'float32'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bool'</span></code>, by default <code class="docutils literal notranslate"><span class="pre">'float32'</span></code></p></li>
+<li><p><strong>device</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – generates data on the specified device, supported are <code class="docutils literal notranslate"><span class="pre">'cpu'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cuda:x'</span></code>, where, <cite>x</cite> is the cuda device’s id.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>binary-random subsampling observation matrix <span class="math">\(\bm A\)</span>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>th.Tensor</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<a class="reference internal image-reference" href="_images/BrandomMatrix.png"><img alt="_images/BrandomMatrix.png" class="align-center" src="_images/BrandomMatrix.png" style="width: 436.8px; height: 158.4px;" /></a>
+<p>The results shown in the above figure can be obtained by the following codes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchbox</span> <span class="k">as</span> <span class="nn">tb</span>
+
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">data_path</span><span class="p">(</span><span class="s1">&#39;optical&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;LenaGRAY128.png&#39;</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">imgfile</span><span class="p">)</span><span class="o">*</span> <span class="mf">1.</span>
+
+<span class="n">Phi</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">brandom</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Phi</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">Phi</span> <span class="o">@</span> <span class="n">X</span>
+
+<span class="n">plt</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">imshow</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span> <span class="n">Y</span><span class="p">],</span> <span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Full&#39;</span><span class="p">,</span> <span class="s1">&#39;Subsampling matrix&#39;</span><span class="p">,</span> <span class="s1">&#39;Subsampled&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.sensing.binary.buniform">
+<span class="sig-prename descclassname"><span class="pre">torchcs.sensing.binary.</span></span><span class="sig-name descname"><span class="pre">buniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float32'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.sensing.binary.buniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates binary-uniform subsampling matrix</p>
+<p>Generates M-by-N binary-uniform observation matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a>) – shape of Gauss observation matrix [M, N]</p></li>
+<li><p><strong>dtype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – torch’s data type, such as <code class="docutils literal notranslate"><span class="pre">'float32'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bool'</span></code>, by default <code class="docutils literal notranslate"><span class="pre">'float32'</span></code></p></li>
+<li><p><strong>device</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – generates data on the specified device, supported are <code class="docutils literal notranslate"><span class="pre">'cpu'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cuda:x'</span></code>, where, <cite>x</cite> is the cuda device’s id.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>binary-uniform subsampling observation matrix <span class="math">\(\bm A\)</span>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>th.Tensor</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<a class="reference internal image-reference" href="_images/BuniformMatrix.png"><img alt="_images/BuniformMatrix.png" class="align-center" src="_images/BuniformMatrix.png" style="width: 435.20000000000005px; height: 152.0px;" /></a>
+<p>The results shown in the above figure can be obtained by the following codes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torchbox</span> <span class="k">as</span> <span class="nn">tb</span>
+
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">data_path</span><span class="p">(</span><span class="s1">&#39;optical&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;LenaGRAY128.png&#39;</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">imgfile</span><span class="p">)</span><span class="o">*</span> <span class="mf">1.</span>
+
+<span class="n">Phi</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">buniform</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Phi</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">Phi</span> <span class="o">@</span> <span class="n">X</span>
+
+<span class="n">plt</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">imshow</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span> <span class="n">Y</span><span class="p">],</span> <span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Full&#39;</span><span class="p">,</span> <span class="s1">&#39;Subsampling matrix&#39;</span><span class="p">,</span> <span class="s1">&#39;Subsampled&#39;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>

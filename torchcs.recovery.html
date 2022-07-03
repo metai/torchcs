@@ -92,6 +92,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchcs</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="torchcs.html">torchcs package</a><ul class="current">
@@ -100,6 +101,7 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchcs.recovery package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sensing.html">torchcs.sensing package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchcs.sharing.html">torchcs.sharing package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchcs.signal.html">torchcs.signal package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchcs.html#submodules">Submodules</a></li>
@@ -182,6 +184,114 @@
 <h1>torchcs.recovery package<a class="headerlink" href="#torchcs-recovery-package" title="Permalink to this headline">¶</a></h1>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-torchcs.recovery.dlmlcs">
+<span id="torchcs-recovery-dlmlcs-module"></span><h2>torchcs.recovery.dlmlcs module<a class="headerlink" href="#module-torchcs.recovery.dlmlcs" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.Cnn1d">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">torchcs.recovery.dlmlcs.</span></span><span class="sig-name descname"><span class="pre">Cnn1d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.dlmlcs.Cnn1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.Cnn1d.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.dlmlcs.Cnn1d.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.Cnn1d.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#torchcs.recovery.dlmlcs.Cnn1d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.CsNet1d">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">torchcs.recovery.dlmlcs.</span></span><span class="sig-name descname"><span class="pre">CsNet1d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.dlmlcs.CsNet1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Neural network for compressed reconstruction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>optional</em>) – the number of channels of input signal, by default 1</p></li>
+<li><p><strong>lr</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – learning rate, by default 0.1</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a><em>, </em><em>optional</em>) – random seed for weight initialization, by default None (not set)</p></li>
+<li><p><strong>device</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – computation device, <code class="docutils literal notranslate"><span class="pre">'cuda:x'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cpu'</span></code> by default <code class="docutils literal notranslate"><span class="pre">'cpu'</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.CsNet1d.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modelfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.dlmlcs.CsNet1d.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>load network model from a file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>modelfile</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – model file path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.CsNet1d.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modelfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.dlmlcs.CsNet1d.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>save network model to a file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>modelfile</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – model file path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.CsNet1d.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.dlmlcs.CsNet1d.test" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Y</strong> (<em>tensor</em>) – input for testing, <span class="math">\(N\times C\times L\)</span></p></li>
+<li><p><strong>bs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – batch size</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>recovered signals</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.CsNet1d.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Ytrain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xtrain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Yvalid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xvalid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nepoch</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.dlmlcs.CsNet1d.train" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Ytrain</strong> (<em>tensor</em>) – input for training, <span class="math">\(N\times C\times L\)</span></p></li>
+<li><p><strong>Xtrain</strong> (<em>tensor</em>) – target for training</p></li>
+<li><p><strong>Yvalid</strong> (<em>tensor</em>) – input for validation</p></li>
+<li><p><strong>Xvalid</strong> (<em>tensor</em>) – target for validation</p></li>
+<li><p><strong>bs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – batch size</p></li>
+<li><p><strong>nepoch</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – the number of epochs</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torchcs.recovery.dlmlcs.weights_init">
+<span class="sig-prename descclassname"><span class="pre">torchcs.recovery.dlmlcs.</span></span><span class="sig-name descname"><span class="pre">weights_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcs.recovery.dlmlcs.weights_init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </section>
 <section id="module-torchcs.recovery.ista_fista">
 <span id="torchcs-recovery-ista-fista-module"></span><h2>torchcs.recovery.ista_fista module<a class="headerlink" href="#module-torchcs.recovery.ista_fista" title="Permalink to this headline">¶</a></h2>
@@ -353,9 +463,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>X</strong> (<em>torch tensor</em>) – signal vector or matrix, if <span class="math">\({\bm X}\in{\mathbb R}^{M\times L}\)</span> is a matrix,
+<li><p><strong>tensor</strong> (<em>D</em>) – signal vector or matrix, if <span class="math">\({\bm X}\in{\mathbb R}^{M\times L}\)</span> is a matrix,
 then apply OMP on each column</p></li>
-<li><p><strong>D</strong> (<em>torch tensor</em>) – overcomplete dictionary ( <span class="math">\({\bm D}\in {\mathbb R}^{M\times N}\)</span> )</p></li>
+<li><p><strong>tensor</strong> – overcomplete dictionary ( <span class="math">\({\bm D}\in {\mathbb R}^{M\times N}\)</span> )</p></li>
 </ul>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
@@ -367,7 +477,7 @@ and dividing by the l2-norm. (default: [False, True])</p></li>
 <li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) – The tolerance for the optimization (default: {1.0e-6})</p></li>
 <li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
 <code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex–&gt;real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real–&gt;real</p></li>
-<li><p><strong>islog</strong> (<em>boolean</em>) – Show more log info.</p></li>
+<li><p><strong>islog</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Show more log info.</p></li>
 </ul>
 </dd>
 </dl>
@@ -395,9 +505,9 @@ and dividing by the l2-norm. (default: [False, True])</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>X</strong> (<em>torch tensor</em>) – signal vector or matrix, if <span class="math">\({\bm X}\in{\mathbb R}^{M\times L}\)</span> is a matrix,
+<li><p><strong>tensor</strong> (<em>D</em>) – signal vector or matrix, if <span class="math">\({\bm X}\in{\mathbb R}^{M\times L}\)</span> is a matrix,
 then apply OMP on each column</p></li>
-<li><p><strong>D</strong> (<em>torch tensor</em>) – overcomplete dictionary ( <span class="math">\({\bm D}\in {\mathbb R}^{M\times N}\)</span> )</p></li>
+<li><p><strong>tensor</strong> – overcomplete dictionary ( <span class="math">\({\bm D}\in {\mathbb R}^{M\times N}\)</span> )</p></li>
 </ul>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
@@ -411,7 +521,7 @@ and dividing by the l2-norm. (default: [False, False])</p></li>
 <li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The method for solving new sparse coefficients.</p></li>
 <li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Complex mode or real mode, <code class="docutils literal notranslate"><span class="pre">'cc'</span></code> for complex–&gt;complex,
 <code class="docutils literal notranslate"><span class="pre">'cr'</span></code> for complex–&gt;real, <code class="docutils literal notranslate"><span class="pre">'rr'</span></code> for real–&gt;real.</p></li>
-<li><p><strong>islog</strong> (<em>boolean</em>) – Show more log info.</p></li>
+<li><p><strong>islog</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Show more log info.</p></li>
 </ul>
 </dd>
 </dl>

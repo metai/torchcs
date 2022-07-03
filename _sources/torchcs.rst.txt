@@ -11,6 +11,7 @@ Subpackages
    torchcs.recovery
    torchcs.sensing
    torchcs.sharing
+   torchcs.signal
 
 Submodules
 ----------

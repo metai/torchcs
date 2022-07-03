@@ -1,0 +1,21 @@
+torchcs.signal package
+======================
+
+Submodules
+----------
+
+torchcs.signal.pulses module
+----------------------------
+
+.. automodule:: torchcs.signal.pulses
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: torchcs.signal
+   :members:
+   :undoc-members:
+   :show-inheritance:

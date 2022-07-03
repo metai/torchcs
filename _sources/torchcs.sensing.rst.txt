@@ -12,6 +12,14 @@ torchcs.sensing.bernoullis module
    :undoc-members:
    :show-inheritance:
 
+torchcs.sensing.binary module
+-----------------------------
+
+.. automodule:: torchcs.sensing.binary
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 torchcs.sensing.gaussians module
 --------------------------------
 
